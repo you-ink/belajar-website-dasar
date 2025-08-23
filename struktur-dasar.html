@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contoh Struktur HTML Dasar</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    header, footer {
+      background: #0c0a9e;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    section {
+      margin-bottom: 30px;
+      padding: 20px;
+      background: #f4f4f4;
+      border-radius: 8px;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    button {
+      background: #0c0a9e;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background: #1512d4;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Website Saya</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">Tentang</a>
+      <a href="#contact">Kontak</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home">
+      <h2>Selamat Datang</h2>
+      <p>Ini adalah contoh struktur dasar HTML dengan header, main, section, dan footer.</p>
+      <button onclick="tampilkanPesan()">Klik Saya</button>
+    </section>
+
+    <section id="about">
+      <h2>Tentang Kami</h2>
+      <p>Kami adalah tim pengembang web yang fokus pada desain modern dan clean code.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Kontak</h2>
+      <p>Hubungi kami melalui email: <a href="mailto:info@contoh.com">info@contoh.com</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 You-Ink.</p>
+  </footer>
+
+  <script>
+    function tampilkanPesan() {
+      alert("Tombol diklik!");
+    }
+  </script>
+</body>
+</html>
