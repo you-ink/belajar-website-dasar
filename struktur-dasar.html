@@ -80,8 +80,31 @@
     <section id="contact">
       <h2>Kontak</h2>
       <p>Hubungi kami melalui email: <a href="mailto:info@contoh.com">info@contoh.com</a></p>
+      <form method="post" id="contact-us-form" onsubmit="return submitContactForm();">
+        <input type="text" name="name" placeholder="Nama Anda">
+        <input type="email" name="email" placeholder="Email Anda">
+        <textarea name="message" placeholder="Pesan">
+        </textarea>
+        <p style="color: red;" id="error-message"></p>
+        <button type="submit">Kirim</button>
+        <button type="reset">Reset</button>
+      </form>
+      <br>
+      <button onclick="tampilkanLoading()">Klik Saya</button>
     </section>
   </main>
+
+  <div class="loader" style="
+    width: 100%; 
+    text-align: center; 
+    height: 100vh; 
+    background-color: #0c0a9e;
+    color: white;
+    position: fixed;
+    top: 0;
+    overflow: hidden;">
+    <p style="font-size: 24px; font-weight: bold;">Loading...</p>
+  </div>
 
   <footer>
     <p>&copy; 2025 You-Ink.</p>
@@ -91,6 +114,32 @@
     function tampilkanPesan() {
       alert("Tombol diklik!");
     }
+
+    function submitContactForm() {
+      const name = document.getElementsByName("name")[0].value;
+      const email = document.getElementsByName("email")[0].value;
+      const message = document.getElementsByName("message")[0].value;
+
+      console.log("name:", name);
+      console.log("email:", email);
+      console.log("message:", message);
+
+      var error = document.getElementById("error-message");
+
+      if (name == "") {
+        error.innerHTML = "Nama harus diisi";
+        return false;
+      }
+      
+      return true;
+    }
+
+    function closeLoader(){
+      setTimeout(() => {
+        document.querySelector(".loader").style.display = "none";
+      }, 2000)
+    }
+    closeLoader();
   </script>
 </body>
 </html>
